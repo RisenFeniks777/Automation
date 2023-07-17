@@ -16,7 +16,7 @@ class DemoFindElementByIDandName():
         driver.find_element(by=By.XPATH, value='//*[@id="react-burger-menu-btn"]').click()
 
         # Use a different locating strategy to find the "About" link
-        about_link = wait.until(EC.visibility_of_element_located((By.XPATH, '//a[text()="About"]')))
+        about_link = wait.until(EC.visibility_of_element_located((By.PARTIAL_LINK_TEXT, 'About')))
         about_link.click()
 
 FindbyID = DemoFindElementByIDandName()
